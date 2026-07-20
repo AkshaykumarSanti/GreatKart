@@ -61,4 +61,14 @@
 ✅ Displayed selected products in the cart  
 ✅ Improved shopping experience with cart summary
 
+### Day 07 - Add to Cart Functionality
+
+✅ Added shopping cart icon to the navigation bar  
+✅ Implemented Add to Cart functionality  
+✅ Enabled users to add products to the shopping cart  
+✅ Updated cart item count dynamically  
+✅ Improved cart interaction and user experience
+
+---
+
 ---
