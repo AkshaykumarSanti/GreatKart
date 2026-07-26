@@ -60,7 +60,13 @@
 							</div>
 							<input type="text" class="form-control"  value="{{ cart_item.quantity }}">
 							<div class="input-group-append">
-							<a href="{% url 'add_cart' cart_item.product.id %}" class="btn btn-light" type="button" id="button-minus"> <i class="fa fa-plus"></i> </a>
+								<form action="{% url 'increment_cart' cart_item.id %}" method="post">
+    {% csrf_token %}
+
+    <button class="btn btn-light" type="submit" aria-label="Increase quantity">
+        <i class="fa fa-plus"></i>
+    </button>
+</form>
 							</div>
 						</div> <!-- input-group.// -->
 					</div> <!-- col.// -->
@@ -72,7 +78,7 @@
 		</div> <!-- price-wrap .// -->
 	</td>
 	<td class="text-right"> 
-	<a href="{% url 'remove_cart_item' cart_item.product.id cart_item.id %}" class="btn btn-danger"> Remove</a>
+	<a href="{% url 'remove_cart_item' cart_item.product.id cart_item.id %}" onclick="return confirm('Are you sure to remove this item')" class="btn btn-danger"> Remove</a>
 	</td>
 </tr>
 {% endfor %}

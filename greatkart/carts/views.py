@@ -3,6 +3,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from store.models import Product, Variation
 from .models import Cart, CartItem
 from django.http import HttpResponse
+from django.views.decorators.csrf import ensure_csrf_cookie
+from django.views.decorators.http import require_POST
 
 def _cart_Id(request):
     cart = request.session.session_key
@@ -95,6 +97,17 @@ def remove_cart_item(request, product_id, cart_item_id):
     return redirect('cart')
 
 
+@require_POST
+def increment_cart(request, cart_item_id):
+    """Increase the quantity of one exact cart line (including its variations)."""
+    cart = get_object_or_404(Cart, cart_id=_cart_Id(request))
+    cart_item = get_object_or_404(CartItem, id=cart_item_id, cart=cart)
+    cart_item.quantity += 1
+    cart_item.save()
+    return redirect('cart')
+
+
+@ensure_csrf_cookie
 def cart(request, total = 0, quantity = 0, cart_items = None):
     try:
         cart = Cart.objects.get(cart_id = _cart_Id(request))
