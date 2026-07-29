@@ -93,7 +93,22 @@
 ✅ Displayed selected variations (Color & Size) in the shopping cart
 
 ✅ Updated cart add/remove functionality to work correctly with product variations
+
+### Day 10 - Login & Registration UI
+
+✅ Created user login page
+
+✅ Created user registration page
+
+✅ Designed responsive authentication forms using Bootstrap
+
+✅ Integrated login and registration pages with the project layout
+
+✅ Improved navigation between authentication pages
+
+✅ Prepared the authentication module for backend integration
 ---
+
 ---
 
 ---
