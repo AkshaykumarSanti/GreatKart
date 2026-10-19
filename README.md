@@ -1,120 +1,63 @@
-# GreatKart – Django E-Commerce Web Application
+# GreatKart — Django E-Commerce Web Application
 
-GreatKart is a Django-based e-commerce web application that provides essential online shopping features, including user authentication, product and category management, product search, product variations, and shopping cart functionality.
+GreatKart is a full-stack e-commerce web application built with **Python and Django**. It provides a platform for users to browse product categories, explore products, manage their shopping cart, and interact with an online store through a structured web application.
 
 ## 🚀 Features
 
-- **User Authentication:** User registration and login using email and password.
-- **Product Management:** Manage products and categories through the Django Admin panel.
-- **Product Catalog:** Display products with images, details, and availability status.
-- **Product Variations:** Support for different product sizes and colors.
-- **Shopping Cart:** Add and remove products and manage cart items.
-- **Dynamic Cart Summary:** Display cart item count and calculate the total price dynamically.
-- **Variation-Based Cart Items:** Group identical product variations and maintain different variation combinations as separate cart items.
-- **Product Search:** Search for products using keywords.
-- **Pagination:** Display products across multiple pages for easier navigation.
-- **Responsive UI:** Bootstrap-based interface with navigation and footer sections.
-- **Out-of-Stock Handling:** Indicate product availability to users.
+- **User Authentication** — User registration, login, and account management.
+- **Product Catalog** — Browse products organized by categories.
+- **Product Variations** — Support for product attributes such as size and color.
+- **Shopping Cart** — Add products to the cart and manage cart items.
+- **Product Search** — Find products using search functionality.
+- **Inventory Availability** — Display product availability, including out-of-stock items.
+- **Django ORM** — Manage application data through Django's object-relational mapper.
+- **Admin Interface** — Manage application data using Django's administrative capabilities.
+- **Responsive Interface** — Browse the store through a web-based user interface.
 
-## 🛠️ Technologies Used
+## 🛠️ Tech Stack
 
-- **Backend:** Python, Django
-- **Database:** SQLite
-- **Frontend:** HTML, CSS, Bootstrap
-- **Tools:** Git, GitHub, VS Code
+| Technology | Purpose |
+|---|---|
+| Python | Backend programming |
+| Django | Web framework and application logic |
+| Django ORM | Database operations |
+| SQLite | Development database, if configured |
+| HTML and CSS | Page structure and styling |
+| JavaScript | Client-side interactions |
+| Bootstrap | Responsive UI components, if used by the project |
 
-## 📂 Project Modules
+## 📁 Project Structure
 
-- **Accounts:** Handles user registration, login, and authentication.
-- **Category:** Manages product categories.
-- **Store:** Handles product details, product listings, search, and pagination.
-- **Cart:** Manages cart items, product variations, quantities, and pricing.
-
-## 📈 Development Progress
-
-### Day 01 – Project Setup and UI Structure
-- Initialized the Django project and established the initial UI structure.
-- Integrated a Bootstrap template.
-- Created the navigation bar and footer.
-- Set up the basic HTML and CSS layout.
-
-### Day 02 – Authentication and Category Module
-- Created the `accounts` application for user management.
-- Implemented email-and-password-based authentication.
-- Created the `category` application for product categorization.
-- Configured project settings, URL routing, and database migrations.
-
-### Day 03 – Store Module Setup
-- Created and configured the `store` application.
-- Set up media configuration for product images.
-- Updated URL routing for the store module.
-- Prepared models, views, and admin configuration for product management.
-
-### Day 04 – Category and Product Management
-- Implemented category and product management.
-- Created product models and product details.
-- Established relationships between products and categories.
-- Configured Django Admin for managing products and categories.
-
-### Day 05 – Product Display Enhancements
-- Implemented out-of-stock product handling.
-- Made product images and names clickable.
-- Added navigation to individual product detail pages.
-- Improved product browsing functionality.
-
-### Day 06 – Shopping Cart Implementation
-- Implemented shopping cart functionality.
-- Displayed selected products in the cart.
-- Calculated the total cart price dynamically.
-- Added a cart item count and summary.
-
-### Day 07 – Add to Cart Functionality
-- Added a shopping cart icon to the navigation bar.
-- Implemented the Add to Cart feature.
-- Enabled users to add products to the cart.
-- Updated the cart item count dynamically.
-
-### Day 08 – Search and Pagination
-- Implemented keyword-based product search.
-- Added pagination to product listings.
-- Improved product discovery and catalog navigation.
-
-### Day 09 – Product Variations and Cart Improvements
-- Added size and color variations to products.
-- Displayed available variations on product detail pages.
-- Stored selected variations in cart items.
-- Grouped identical product variations and updated their quantities.
-- Maintained separate cart items for different variation combinations.
-- Displayed selected sizes and colors in the cart.
-- Updated cart add/remove functionality to support product variations.
-
-### Day 10 – Login and Registration UI
-- Created user login and registration pages.
-- Designed responsive authentication forms using Bootstrap.
-- Integrated authentication pages with the project layout.
-- Improved navigation between login and registration pages.
-- Prepared the authentication interface for backend integration.
+```text
+GreatKart/
+├── accounts/              # User authentication and accounts
+├── carts/                 # Shopping cart functionality
+├── category/              # Product categories
+├── orders/                # Order-related application module
+├── store/                 # Product catalog and store functionality
+├── greatkart/              # Main Django project configuration
+├── templates/              # HTML templates
+├── static/                 # CSS, JavaScript, and static assets
+├── media/
+│   └── photos/
+│       └── products/       # Product images
+├── manage.py               # Django management utility
+├── requirements.txt        # Python dependencies
+├── .env-sample             # Example environment configuration
+├── .gitignore              # Git exclusion rules
+└── README.md               # Project documentation
+```
 
 ## ⚙️ Installation and Setup
 
-### Prerequisites
-- Python 3.x
-- pip
-- Git
-
-### 1. Clone the Repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/AkshaykumarSanti/GreatKart.git
-```
-
-### 2. Navigate to the Project Directory
-
-```bash
 cd GreatKart
 ```
 
-### 3. Create and Activate a Virtual Environment
+### 2. Create a virtual environment
 
 **Windows:**
 
@@ -123,70 +66,78 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
-**Linux/macOS:**
+**macOS / Linux:**
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 4. Install Dependencies
-
-```bash
-pip install django
-```
-
-If a `requirements.txt` file is available, install the project dependencies using:
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5. Apply Database Migrations
+### 4. Configure environment variables
+
+Review `.env-sample` and create a local `.env` file if the project uses environment variables. Set the required values for your local environment.
+
+**Important:** Never commit actual secret keys, passwords, or other credentials to GitHub.
+
+### 5. Apply database migrations
 
 ```bash
 python manage.py migrate
 ```
 
-### 6. Create a Superuser (Optional)
+### 6. Create an administrator account (optional)
 
 ```bash
 python manage.py createsuperuser
 ```
 
-### 7. Run the Development Server
+Follow the prompts to configure the administrator account.
+
+### 7. Start the development server
 
 ```bash
 python manage.py runserver
 ```
 
-Open the application in your browser at:
+Open the application in your browser:
 
-`http://127.0.0.1:8000/`
+**http://127.0.0.1:8000/**
 
-Access the Django Admin panel at:
+> Follow any additional project-specific setup steps if your local configuration requires them.
 
-`http://127.0.0.1:8000/admin/`
+## 🧪 Testing the Application
 
-## 🎯 Learning Outcomes
+After starting the server, you can:
 
-This project provides practical experience with:
+1. Register a user account and test login.
+2. Browse product categories and product details.
+3. Search for products.
+4. Test adding products to the shopping cart.
+5. Check product availability and variations.
+6. Access the Django administration site if an administrator account is configured.
 
-- Django project structure and application development.
-- Model creation and database relationships using Django ORM.
-- User authentication and URL routing.
-- Product catalog and category management.
-- Shopping cart logic and product variation handling.
-- Search, pagination, and dynamic price calculations.
-- Integrating Bootstrap templates with Django.
+## 🔐 Security Notes
+
+- Keep `.env` and other files containing credentials out of version control.
+- Use a secure, unique Django `SECRET_KEY` outside local development.
+- Set `DEBUG = False` and configure `ALLOWED_HOSTS` appropriately before deployment.
+- Review the database and static/media configuration before deploying the application.
 
 ## 🔮 Future Enhancements
 
-- Implement order placement and order history.
-- Integrate a payment gateway.
-- Add product reviews and ratings.
-- Add automated tests for core functionality.
-- Improve deployment and production configuration.
+Potential improvements include:
+
+- Payment gateway integration.
+- Order placement and order history.
+- Order tracking and notifications.
+- Automated tests for key application features.
+- Production deployment and improved security configuration.
 
 ## 👨‍💻 Author
 
@@ -195,6 +146,6 @@ This project provides practical experience with:
 - GitHub: [AkshaykumarSanti](https://github.com/AkshaykumarSanti)
 - LinkedIn: [Akshaykumar Santi](https://www.linkedin.com/in/akshaykumar-santi/)
 
----
+## 📄 License
 
-*Developed as a Django e-commerce project to practice backend development and core online shopping functionality.*
+This project is available for educational and portfolio purposes. Add a formal license file if you intend to specify permissions for reuse and distribution.
