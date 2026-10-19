@@ -1,114 +1,200 @@
-# GreatKart
+# GreatKart – Django E-Commerce Web Application
 
-## 🚀 Development Progress
+GreatKart is a Django-based e-commerce web application that provides essential online shopping features, including user authentication, product and category management, product search, product variations, and shopping cart functionality.
 
-### Day 01 - Frontend Setup & UI Structure
+## 🚀 Features
 
-✅ Initialized GreatKart Django project frontend  
-✅ Integrated Bootstrap template for UI design  
-✅ Created responsive navigation bar  
-✅ Added website footer section  
-✅ Setup basic HTML and CSS structure  
-✅ Prepared initial web layout for further Django integration
+- **User Authentication:** User registration and login using email and password.
+- **Product Management:** Manage products and categories through the Django Admin panel.
+- **Product Catalog:** Display products with images, details, and availability status.
+- **Product Variations:** Support for different product sizes and colors.
+- **Shopping Cart:** Add and remove products and manage cart items.
+- **Dynamic Cart Summary:** Display cart item count and calculate the total price dynamically.
+- **Variation-Based Cart Items:** Group identical product variations and maintain different variation combinations as separate cart items.
+- **Product Search:** Search for products using keywords.
+- **Pagination:** Display products across multiple pages for easier navigation.
+- **Responsive UI:** Bootstrap-based interface with navigation and footer sections.
+- **Out-of-Stock Handling:** Indicate product availability to users.
+
+## 🛠️ Technologies Used
+
+- **Backend:** Python, Django
+- **Database:** SQLite
+- **Frontend:** HTML, CSS, Bootstrap
+- **Tools:** Git, GitHub, VS Code
+
+## 📂 Project Modules
+
+- **Accounts:** Handles user registration, login, and authentication.
+- **Category:** Manages product categories.
+- **Store:** Handles product details, product listings, search, and pagination.
+- **Cart:** Manages cart items, product variations, quantities, and pricing.
+
+## 📈 Development Progress
+
+### Day 01 – Project Setup and UI Structure
+- Initialized the Django project and established the initial UI structure.
+- Integrated a Bootstrap template.
+- Created the navigation bar and footer.
+- Set up the basic HTML and CSS layout.
+
+### Day 02 – Authentication and Category Module
+- Created the `accounts` application for user management.
+- Implemented email-and-password-based authentication.
+- Created the `category` application for product categorization.
+- Configured project settings, URL routing, and database migrations.
+
+### Day 03 – Store Module Setup
+- Created and configured the `store` application.
+- Set up media configuration for product images.
+- Updated URL routing for the store module.
+- Prepared models, views, and admin configuration for product management.
+
+### Day 04 – Category and Product Management
+- Implemented category and product management.
+- Created product models and product details.
+- Established relationships between products and categories.
+- Configured Django Admin for managing products and categories.
+
+### Day 05 – Product Display Enhancements
+- Implemented out-of-stock product handling.
+- Made product images and names clickable.
+- Added navigation to individual product detail pages.
+- Improved product browsing functionality.
+
+### Day 06 – Shopping Cart Implementation
+- Implemented shopping cart functionality.
+- Displayed selected products in the cart.
+- Calculated the total cart price dynamically.
+- Added a cart item count and summary.
+
+### Day 07 – Add to Cart Functionality
+- Added a shopping cart icon to the navigation bar.
+- Implemented the Add to Cart feature.
+- Enabled users to add products to the cart.
+- Updated the cart item count dynamically.
+
+### Day 08 – Search and Pagination
+- Implemented keyword-based product search.
+- Added pagination to product listings.
+- Improved product discovery and catalog navigation.
+
+### Day 09 – Product Variations and Cart Improvements
+- Added size and color variations to products.
+- Displayed available variations on product detail pages.
+- Stored selected variations in cart items.
+- Grouped identical product variations and updated their quantities.
+- Maintained separate cart items for different variation combinations.
+- Displayed selected sizes and colors in the cart.
+- Updated cart add/remove functionality to support product variations.
+
+### Day 10 – Login and Registration UI
+- Created user login and registration pages.
+- Designed responsive authentication forms using Bootstrap.
+- Integrated authentication pages with the project layout.
+- Improved navigation between login and registration pages.
+- Prepared the authentication interface for backend integration.
+
+## ⚙️ Installation and Setup
+
+### Prerequisites
+- Python 3.x
+- pip
+- Git
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/AkshaykumarSanti/GreatKart.git
+```
+
+### 2. Navigate to the Project Directory
+
+```bash
+cd GreatKart
+```
+
+### 3. Create and Activate a Virtual Environment
+
+**Windows:**
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+**Linux/macOS:**
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 4. Install Dependencies
+
+```bash
+pip install django
+```
+
+If a `requirements.txt` file is available, install the project dependencies using:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Apply Database Migrations
+
+```bash
+python manage.py migrate
+```
+
+### 6. Create a Superuser (Optional)
+
+```bash
+python manage.py createsuperuser
+```
+
+### 7. Run the Development Server
+
+```bash
+python manage.py runserver
+```
+
+Open the application in your browser at:
+
+`http://127.0.0.1:8000/`
+
+Access the Django Admin panel at:
+
+`http://127.0.0.1:8000/admin/`
+
+## 🎯 Learning Outcomes
+
+This project provides practical experience with:
+
+- Django project structure and application development.
+- Model creation and database relationships using Django ORM.
+- User authentication and URL routing.
+- Product catalog and category management.
+- Shopping cart logic and product variation handling.
+- Search, pagination, and dynamic price calculations.
+- Integrating Bootstrap templates with Django.
+
+## 🔮 Future Enhancements
+
+- Implement order placement and order history.
+- Integrate a payment gateway.
+- Add product reviews and ratings.
+- Add automated tests for core functionality.
+- Improve deployment and production configuration.
+
+## 👨‍💻 Author
+
+**Akshaykumar Santi**
+
+- GitHub: [AkshaykumarSanti](https://github.com/AkshaykumarSanti)
+- LinkedIn: [Akshaykumar Santi](https://www.linkedin.com/in/akshaykumar-santi/)
 
 ---
 
-### Day 02 - Authentication & Category Module
-
-✅ Implemented custom user authentication using email and password  
-✅ Created the `accounts` application for user management  
-✅ Created the `category` application for product categorization  
-✅ Configured project settings and URL routing for new applications  
-✅ Applied database migrations
-
----
-
-### Day 03 - Store Module Setup
-
-✅ Created the `store` application  
-✅ Configured project settings for the store module  
-✅ Added media directory configuration for product images  
-✅ Updated URL routing for the store application  
-✅ Prepared models, views, and admin configuration for product management
-
----
-
-### Day 04 - Category & Product Management
-
-✅ Implemented category management functionality  
-✅ Added product model and product details  
-✅ Linked products with their respective categories  
-✅ Configured Django Admin for category and product management  
-✅ Prepared the project for displaying products on the website
-
----
-
-### Day 05 - Product Display Enhancements
-
-✅ Implemented out-of-stock handling for products  
-✅ Made product images clickable  
-✅ Made product names clickable  
-✅ Enabled navigation to the product detail page  
-✅ Improved the overall product browsing experience
-
----
-
-### Day 06 - Shopping Cart Implementation
-
-✅ Implemented shopping cart functionality  
-✅ Added cart item count display  
-✅ Calculated total cart price dynamically  
-✅ Displayed selected products in the cart  
-✅ Improved shopping experience with cart summary
-
-### Day 07 - Add to Cart Functionality
-
-✅ Added shopping cart icon to the navigation bar  
-✅ Implemented Add to Cart functionality  
-✅ Enabled users to add products to the shopping cart  
-✅ Updated cart item count dynamically  
-✅ Improved cart interaction and user experience
-
-### Day 08 - Search & Pagination
-
-✅ Implemented product search functionality  
-✅ Added pagination for product listings  
-✅ Enabled users to search products by keywords  
-✅ Improved product browsing and navigation  
-✅ Enhanced overall user experience for the product catalog
-
-
-### Day 09 - Product Variations & Cart Improvements
-
-✅ Added product color and size variations
-
-✅ Displayed available variations on the product details page
-
-✅ Stored selected product variations in the shopping cart
-
-✅ Grouped identical product variations into a single cart item and increased quantity
-
-✅ Treated different variation combinations as separate cart items
-
-✅ Displayed selected variations (Color & Size) in the shopping cart
-
-✅ Updated cart add/remove functionality to work correctly with product variations
-
-### Day 10 - Login & Registration UI
-
-✅ Created user login page
-
-✅ Created user registration page
-
-✅ Designed responsive authentication forms using Bootstrap
-
-✅ Integrated login and registration pages with the project layout
-
-✅ Improved navigation between authentication pages
-
-✅ Prepared the authentication module for backend integration
----
-
----
-
----
+*Developed as a Django e-commerce project to practice backend development and core online shopping functionality.*
