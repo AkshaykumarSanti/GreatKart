@@ -85,34 +85,34 @@ GreatKart is a full-stack e-commerce web application developed using Python and 
 
 # 📸 Project Preview
 
+## 🔐 User Registration & Login
+
+| Register | Login |
+|:---:|:---:|
+| <img src="Screenshots/Register.png" width="400"> | <img src="Screenshots/Login.png" width="400"> |
+
+---
+
 ## 🏠 Home Page
 
 <p align="center">
-  <img src="Screenshots/home.png" width="900">
+  <img src="Screenshots/Home.png" width="900">
 </p>
 
 ---
 
-## 🔐 Authentication
-
-| Sign Up | Login |
-|----------|--------|
-| <img src="Screenshots/signup.png"> | <img src="Screenshots/login.png"> |
-
----
-
-## 🛍️ Product Categories & Store
+## 📂 Product Categories
 
 <p align="center">
-  <img src="Screenshots/store.png" width="900">
+  <img src="Screenshots/Category.png" width="900">
 </p>
 
 ---
 
-## 📦 Product Details
+## 🛍️ Product Details
 
 <p align="center">
-  <img src="Screenshots/product-details.png" width="900">
+  <img src="Screenshots/Product-Detail.png" width="900">
 </p>
 
 ---
@@ -120,7 +120,7 @@ GreatKart is a full-stack e-commerce web application developed using Python and 
 ## 🛒 Shopping Cart
 
 <p align="center">
-  <img src="Screenshots/cart.png" width="900">
+  <img src="Screenshots/Cart.png" width="900">
 </p>
 
 ---
